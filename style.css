@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color:
+        #242424;
+    color: black;
+    padding: 0 10px;
+}
+
+.wrapper {
+    position: relative;
+    padding: 35px;
+    background-color: white;
+    overflow-x: hidden;
+    max-width: 1000px;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    cursor: pointer;
+}
+
+.wrapper .icon {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.icon:first-child {
+    left: 0;
+    background: linear-gradient(90deg, #fff 70%, transparent);
+    display: none;
+}
+
+.icon:last-child {
+    right: 0;
+    background: linear-gradient(-90deg, #fff 70%, transparent);
+    justify-content: flex-end;
+}
+
+.icon i {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: #d8d5f2;
+}
+
+.icon i:hover {
+    background: #efedfb;
+}
+
+.icon:first-child i {
+    margin-left: 15px;
+
+}
+
+.icon:last-child i {
+    margin-right: 15px;
+}
+
+.wrapper .tabs-box {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.tabs-box.dragging {
+    scroll-behavior: auto;
+    cursor: grabbing;
+}
+
+.tabs-box .tab {
+    font-size: 1.18rem;
+    background-color: #f5f4fd;
+    white-space: nowrap;
+    padding: 13px 20px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border: 1px solid #d8d5f2;
+}
+
+.tabs-box.dragging .tab {
+    user-select: none;
+    pointer-events: none;
+}
+
+.tabs-box .tab.active {
+    color: #fff;
+    background: #5372f0;
+    border-color: transparent;
+}
